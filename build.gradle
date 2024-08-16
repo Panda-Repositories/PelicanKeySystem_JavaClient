@@ -17,3 +17,14 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            from components.release
+            groupId = 'com.github.SayHiEveryday'
+            artifactId = 'PandaKey'
+            version = '1.0.0'
+        }
+    }
+}
