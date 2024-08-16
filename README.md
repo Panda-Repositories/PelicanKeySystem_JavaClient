@@ -9,8 +9,26 @@ This is open source lib implement from [PandaDevelopment's lua v2 lib](https://g
 <br>
 Provided basic function like [GetKey](https://github.com/Panda-Repositories/PandaKS_Libraries/blob/main/library/LuaLib/ROBLOX/PandaBetaLib.lua#L159), [Key Validation](https://github.com/Panda-Repositories/PandaKS_Libraries/blob/main/library/LuaLib/ROBLOX/PandaBetaLib.lua#L191)
 
-## 🛠️ Installation 
-**TODO**
+## 🛠️ Installation
+
+Install Using [jitpack](https://jitpack.io/)
+
+Start by add this to `build.gradle`
+```gradle
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+```
+
+Then add implementation to dependencies
+```gradle
+dependencies {
+        implementation 'com.github.SayHiEveryday:PandaKey-Implement:VERSION'
+}
+```
+
+Change the version to latest version see [Release](https://github.com/SayHiEveryday/PandaKey-Implement/releases)
 
 ## 📖 Getting Started
 
