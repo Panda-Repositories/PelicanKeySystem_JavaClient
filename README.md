@@ -22,7 +22,7 @@ public class Main {
         // Retrieve a unique hardware identifier using the IdentifierProvider class.
         String identifier = IdentifierProvider.getHardwareIdentifier();
 
-        // Instantiate a PandaKey object with the specified service name and hardware identifier.
+        // Create PandaKey Object with service name and hardware identifier.
         PandaKey pandakey = PandaKey.newBuilder("Service name")
                 .setIdentifier(identifier)
                 .build();
@@ -40,7 +40,9 @@ import me.sallyio.PandaKey.common.BrowserUtil;
 
 public class Main {
     public static void main(String[] args) {
-        PandaKey pandakey = PandaKey.newBuilder("Your Service Name").setIdentifier("Identifier").build();
+        PandaKey pandakey = PandaKey.newBuilder("Your Service Name")
+                .setIdentifier("Identifier")
+                .build();
         BrowserUtil.open(pandakey.getKey());
     }
 }
