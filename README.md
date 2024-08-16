@@ -13,6 +13,7 @@ Provided basic function like [GetKey](https://github.com/Panda-Repositories/Pand
 
 Install Using [jitpack](https://jitpack.io/)
 
+### Gradle 
 Start by add this to `build.gradle`
 ```gradle
 repositories {
@@ -29,6 +30,32 @@ dependencies {
 ```
 
 Change the version to latest version see [Release](https://github.com/SayHiEveryday/PandaKey-Implement/releases)
+
+### Maven
+
+Start by adding jitpack repository to build file 
+```maven
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+```
+
+Then add dependency 
+
+```maven
+<dependency>
+    <groupId>com.github.SayHiEveryday</groupId>
+    <artifactId>PandaKey-Implement</artifactId>
+    <version>VERSION</version>
+</dependency>
+```
+
+### Other
+
+See [jitpack packages](https://jitpack.io/#SayHiEveryday/PandaKey-Implement) for more information
 
 ## 📖 Getting Started
 
