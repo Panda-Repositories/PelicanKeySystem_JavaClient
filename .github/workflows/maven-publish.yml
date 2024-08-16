@@ -1,0 +1,33 @@
+name: Publish Maven Package
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'  # Adjust the tag pattern to match your versioning scheme
+
+jobs:
+  build:
+    name: Build and Publish Job
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'  # Use the JDK version compatible with your project
+          distribution: 'adopt-openjdk'
+
+      - name: Set up Gradle
+        uses: gradle/gradle-build-action@v3
+        with:
+          gradle-version: '8.10'  # Match your Gradle version
+
+      - name: Build and publish
+        run: ./gradlew publish
+        env:
+          USERNAME: ${{ secrets.GITHUB_ACTOR }}  # GitHub username
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub token with necessary scopes
+
