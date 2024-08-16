@@ -18,7 +18,7 @@ import me.sallyio.PandaKey.PandaKey;
 import me.sallyio.PandaKey.common.IdentifierProvider;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         // Retrieve a unique hardware identifier using the IdentifierProvider class.
         String identifier = IdentifierProvider.getHardwareIdentifier();
 
