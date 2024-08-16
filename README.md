@@ -24,7 +24,7 @@ repositories {
 Then add implementation to dependencies
 ```gradle
 dependencies {
-        implementation 'com.github.SayHiEveryday:PandaKey-Implement:VERSION'
+    implementation 'com.github.SayHiEveryday:PandaKey-Implement:VERSION'
 }
 ```
 
