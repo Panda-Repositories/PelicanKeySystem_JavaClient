@@ -55,16 +55,20 @@ public class Main {
 }
 ```
 
-We provide class like BrowserUtil so you can open browser easily
+We offer utility classes such as BrowserUtil to streamline the process of launching a web browser within your application.
 ```java
 import me.sallyio.PandaKey.common.BrowserUtil;
 
 public class Main {
     public static void main(String[] args) {
+        // Create an instance of PandaKey with a specified service name and identifier
         PandaKey pandakey = PandaKey.newBuilder("Your Service Name")
                 .setIdentifier("Identifier")
                 .build();
+
+        // Open the browser using the generated key
         BrowserUtil.open(pandakey.getKey());
     }
 }
+
 ```
