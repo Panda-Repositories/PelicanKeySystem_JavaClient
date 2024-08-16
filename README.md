@@ -1,15 +1,15 @@
 <img align="right" src="https://pandadevelopment.net/images/logo.png" alt="">
 
-# Panda key Implementation
+# 🐼 Panda key Implementation
 
 This is open source lib implement from [PandaDevelopment's lua v2 lib](https://github.com/Panda-Repositories/PandaKS_Libraries/blob/main/library/LuaLib/ROBLOX/PandaBetaLib.lua)
 <br>
 Provided basic function like [GetKey](https://github.com/Panda-Repositories/PandaKS_Libraries/blob/main/library/LuaLib/ROBLOX/PandaBetaLib.lua#L159), [Key Validation](https://github.com/Panda-Repositories/PandaKS_Libraries/blob/main/library/LuaLib/ROBLOX/PandaBetaLib.lua#L191)
 
-## Installation 
+## 🛠️ Installation 
 **TODO**
 
-## Getting Started
+## 📖 Getting Started
 
 Start by Import necessary class and creating instance of PandaKey
 
