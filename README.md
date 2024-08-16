@@ -34,7 +34,7 @@ Change the version to latest version see [Release](https://github.com/SayHiEvery
 ### Maven
 
 Start by adding jitpack repository to build file 
-```maven
+```xml
 <repositories>
     <repository>
         <id>jitpack.io</id>
@@ -45,7 +45,7 @@ Start by adding jitpack repository to build file
 
 Then add dependency 
 
-```maven
+```xml
 <dependency>
     <groupId>com.github.SayHiEveryday</groupId>
     <artifactId>PandaKey-Implement</artifactId>
