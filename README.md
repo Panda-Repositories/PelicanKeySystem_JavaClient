@@ -1,4 +1,4 @@
-[![](https://jitpack.io/v/jitpack/gradle-simple.svg?label=Builds)](https://jitpack.io/#SayHiEveryday/PandaKey-Implement)
+[![](https://jitpack.io/v/SayHiEveryday/PandaKey-Implement.svg?label=Builds)](https://jitpack.io/#SayHiEveryday/PandaKey-Implement)
 
 <img align="right" src="https://pandadevelopment.net/images/logo.png" alt="">
 
