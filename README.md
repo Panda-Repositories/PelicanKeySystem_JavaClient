@@ -99,3 +99,34 @@ public class Main {
 }
 
 ```
+
+To validate key 
+
+```java
+import me.sallyio.PandaKey.PandaKey;
+import me.sallyio.PandaKey.common.IdentifierProvider;
+
+public class Main {
+    public static void main(String[] args) {
+        String identifier = IdentifierProvider.getHardwareIdentifier();
+        PandaKey pandakey = PandaKey.newBuilder("Service name")
+                .setIdentifier(identifier)
+                .build();
+        
+        // Validation with key
+        if (pandakey.validate("Key").isSuccess()) {
+            System.out.println("Key is valid");
+        } else {
+            System.out.println("Key is invalid");
+        }
+        
+        // Keyless Validation 
+        if (pandakey.validate().isSuccess()) {
+            System.out.println("Identifier is valid");
+        } else {
+            System.out.println("Identifier is invalid");
+        }
+    }
+}
+
+```
