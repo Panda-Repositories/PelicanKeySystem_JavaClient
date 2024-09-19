@@ -2,7 +2,7 @@ package me.sallyio.PandaKey;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import me.sallyio.PandaKey.common.RequestProvider;
-import me.sallyio.PandaKey.model.Validation;
+import me.sallyio.PandaKey.model.ValidationModel;
 
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
@@ -16,7 +16,8 @@ public class PandaKey {
     private String service;
     private String identifier;
 
-    private PandaKey(Builder builder) {
+    private PandaKey(Builder builder)
+    {
         this.service = builder.service;
         this.identifier = builder.identifier;
     }
@@ -28,7 +29,8 @@ public class PandaKey {
      * @param identifier the user identifier
      * @return a new {@link Builder} instance
      */
-    public static Builder newBuilder(String service, String identifier) {
+    public static Builder newBuilder(String service, String identifier)
+    {
         return new Builder(service, identifier);
     }
     /**
@@ -37,14 +39,16 @@ public class PandaKey {
      * @param service    the service name
      * @return a new {@link Builder} instance
      */
-    public static Builder newBuilder(String service) {
+    public static Builder newBuilder(String service)
+    {
         return new Builder(service);
     }
 
     /**
      * Builder class for creating a {@link PandaKey} instance.
      */
-    public static class Builder {
+    public static class Builder
+    {
         private String service;
         private String identifier;
 
@@ -54,7 +58,8 @@ public class PandaKey {
          * @param service    the service name
          * @param identifier the user identifier
          */
-        public Builder(String service, String identifier) {
+        public Builder(String service, String identifier)
+        {
             this.service = service;
             this.identifier = identifier;
         }
@@ -63,7 +68,8 @@ public class PandaKey {
          *
          * @param service    the service name
          */
-        public Builder(String service) {
+        public Builder(String service)
+        {
             this.service = service;
         }
 
@@ -72,16 +78,19 @@ public class PandaKey {
          *
          * @return a new {@link PandaKey} instance
          */
-        public PandaKey build() {
+        public PandaKey build()
+        {
             return new PandaKey(this);
         }
 
-        public Builder setService(String service) {
+        public Builder setService(String service)
+        {
             this.service = service;
             return this;
         }
 
-        public Builder setIdentifier(String identifier) {
+        public Builder setIdentifier(String identifier)
+        {
             this.identifier = identifier;
             return this;
         }
@@ -92,7 +101,8 @@ public class PandaKey {
      *
      * @return the URL string to get the key
      */
-    public String getKey() {
+    public String getKey()
+    {
         return Base_URI + "/getkey?service=" + service + "&hwid=" + URLEncoder.encode(identifier, StandardCharsets.UTF_8);
     }
 
@@ -100,14 +110,15 @@ public class PandaKey {
      * Validates the provided key using the Panda validation API.
      *
      * @param key the key to validate
-     * @return a {@link Validation} object containing the validation results,
+     * @return a {@link ValidationModel} object containing the validation results,
      * or null if validation fails
      */
-    public Validation validate(String key) {
+    public ValidationModel validate(String key)
+    {
         try {
             return new ObjectMapper().readValue(
                     RequestProvider.get(Base_URI + "/v2_validation?hwid=" + identifier + "&service=" + service + "&key=" + key).body(),
-                    Validation.class
+                    ValidationModel.class
             );
         } catch (Exception ignore) {
             // Handle exception silently
@@ -118,14 +129,15 @@ public class PandaKey {
     /**
      * Validates using keyless mode with the Panda validation API.
      *
-     * @return a {@link Validation} object containing the validation results,
+     * @return a {@link ValidationModel} object containing the validation results,
      * or null if validation fails
      */
-    public Validation validate() {
+    public ValidationModel validate()
+    {
         try {
             return new ObjectMapper().readValue(
                     RequestProvider.get(Base_URI + "/v2_validation?hwid=" + identifier + "&service=" + service + "&key=keyless").body(),
-                    Validation.class
+                    ValidationModel.class
             );
         } catch (Exception ignore) {
             // Handle exception silently

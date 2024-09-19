@@ -130,3 +130,23 @@ public class Main {
 }
 
 ```
+
+We also have Rest Client for accessing Panda api
+
+```java
+import me.sallyio.PandaKey.rest.RestClient;
+
+import java.time.LocalDate;
+
+public static void main(String[] args) {
+    RestClient restClient = new RestClient("YOUR_API_KEY");
+    
+    // Example Generate key
+    restClient.generateKey(
+            LocalDate.of(2024,12,31), // Expiration date
+            1, // Generate Count
+            false, // mark keys as non-premium
+            "Test Key" // Note
+    );
+}
+```

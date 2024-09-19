@@ -10,7 +10,7 @@ import java.net.http.HttpResponse;
 public class RequestProvider {
     /**
      *
-     * @param uri Url to get
+     * @param uri Url to post
      * @return HttpResponse<String>
      * @throws URISyntaxException -
      * @throws IOException -
@@ -20,7 +20,7 @@ public class RequestProvider {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(new URI(uri))
-                .GET()
+                .POST(HttpRequest.BodyPublishers.noBody())
                 .header("x-uptime-check", "sc1pnzhtj9ch54lmabdfglmwvlw7xmbisfmryknnz8")
                 .header("x-content-type", "c2mxcg5asfrqounontrstufirgzhte1xvkx3n3hnyklzzm1swutotitaod0")
                 .header("user-agent", "pandaauth")
@@ -28,4 +28,5 @@ public class RequestProvider {
 
         return client.send(request, HttpResponse.BodyHandlers.ofString());
     }
+
 }

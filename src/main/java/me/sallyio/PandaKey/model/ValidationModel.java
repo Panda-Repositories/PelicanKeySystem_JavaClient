@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * This class contains information about the owner, service, authentication details,
  * and key information.
  */
-public class Validation {
+public class ValidationModel {
 
     @JsonProperty("OwnerSecretID")
     private String ownerSecretID;
