@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'me.sallyio'
-version = '1.1'
+version = '1.1.1'
 
 repositories {
     mavenCentral()
@@ -27,7 +27,7 @@ publishing {
             from components.java
             groupId = 'com.github.SayHiEveryday'
             artifactId = 'PandaKey'
-            version = '1.0.0'
+            version = '1.1.1'
         }
     }
 }
