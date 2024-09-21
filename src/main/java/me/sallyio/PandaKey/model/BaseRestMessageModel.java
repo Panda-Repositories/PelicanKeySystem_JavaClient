@@ -2,7 +2,7 @@ package me.sallyio.PandaKey.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public abstract class BaseRestMessageModel
+public class BaseRestMessageModel
 {
     @JsonProperty("message")
     private String message;

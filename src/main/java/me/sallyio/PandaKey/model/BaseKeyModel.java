@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.time.ZonedDateTime;
 
-public abstract class BaseKeyModel {
+public class BaseKeyModel {
 
     @JsonProperty("id")
     private String id;
