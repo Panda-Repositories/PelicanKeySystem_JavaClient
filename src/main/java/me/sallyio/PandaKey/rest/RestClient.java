@@ -28,9 +28,7 @@ public class RestClient {
         this.apikey = apiKey;
         this.httpClient = HttpClient.newHttpClient();
         this.gson = new Gson();
-        this.objectMapper = new ObjectMapper();
-
-        this.objectMapper.registerModule(new JavaTimeModule());
+        this.objectMapper = new ObjectMapper().registerModule(new JavaTimeModule());
     }
     public String getApikey() {
         return this.apikey;
