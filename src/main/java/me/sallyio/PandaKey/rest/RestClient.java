@@ -141,7 +141,7 @@ public class RestClient {
      * @throws InterruptedException
      */
     public KeyModel fetchKey(String query) throws URISyntaxException, IOException, InterruptedException {
-        URIBuilder builder = new URIBuilder("https://pandadevelopment/api/key/fetch");
+        URIBuilder builder = new URIBuilder("https://pandadevelopment.net/api/key/fetch");
         builder.addParameter("apiKey", this.apikey);
         builder.addParameter("fetch", query);
 
@@ -214,7 +214,7 @@ public class RestClient {
      * @throws InterruptedException
      */
     public KeylessModel fetchKeyless(String query) throws URISyntaxException, IOException, InterruptedException {
-        URIBuilder builder = new URIBuilder("https://pandadevelopment/api/keyless/fetch");
+        URIBuilder builder = new URIBuilder("https://pandadevelopment.net/api/keyless/fetch");
         builder.addParameter("apiKey", this.apikey);
         builder.addParameter("fetch", query);
 
@@ -241,7 +241,7 @@ public class RestClient {
      * @throws InterruptedException
      */
     public BaseGenerateKeyModel fetchGenereatedKey(String query) throws URISyntaxException, IOException, InterruptedException {
-        URIBuilder builder = new URIBuilder("https://pandadevelopment/api/generated-key/fetch");
+        URIBuilder builder = new URIBuilder("https://pandadevelopment.net/api/generated-key/fetch");
         builder.addParameter("apiKey", this.apikey);
         builder.addParameter("fetch", query);
 

@@ -26,6 +26,34 @@ public class BaseKeyModel {
     @JsonProperty("isPremium")
     private boolean isPremium;
 
+    @JsonProperty("lastResetAt")
+    private String lastResetAt;
+
+    @JsonProperty("serviceId")
+    private String serviceId;
+
+    @Override
+    public String toString() {
+        return "BaseKeyModel{" +
+                "id='" + id + '\'' +
+                ", value='" + value + '\'' +
+                ", note='" + note + '\'' +
+                ", hwid='" + hwid + '\'' +
+                ", expiresAt=" + expiresAt +
+                ", isPremium=" + isPremium +
+                ", lastResetAt='" + lastResetAt + '\'' +
+                ", serviceId='" + serviceId + '\'' +
+                '}';
+    }
+
+    public String getLastResetAt() {
+        return lastResetAt;
+    }
+
+    public String getServiceId() {
+        return serviceId;
+    }
+
     public String getId() {
         return id;
     }
